@@ -1,0 +1,113 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+#app {
+    max-width: 1200px;
+    margin: 40px auto;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    padding: 32px;
+}
+
+.controls {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    margin-bottom: 32px;
+    align-items: flex-end;
+}
+.param-group {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+.button-group {
+    display: flex;
+    gap: 12px;
+    margin-top: 8px;
+}
+.button-group button {
+    padding: 8px 18px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 4px;
+    background: #1976d2;
+    color: #fff;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+.button-group button:hover {
+    background: #1565c0;
+}
+.charts {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 32px;
+}
+.chart-container {
+    background: #fafafa;
+    border-radius: 8px;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+    padding: 16px;
+}
+.chart-container h2 {
+    text-align: center;
+    font-size: 1.1rem;
+    margin-bottom: 8px;
+}
+.max-value {
+    margin-top: 8px;
+    font-size: 1rem;
+    color: #1976d2;
+    text-align: center;
+    font-weight: bold;
+}
+.energias-info {
+    margin-top: 8px;
+    font-size: 0.98rem;
+    color: #d32f2f;
+    text-align: center;
+    font-weight: bold;
+    line-height: 1.5;
+}
+.ayuda {
+    background: #e3f2fd;
+    border-radius: 8px;
+    padding: 18px 24px;
+    margin-bottom: 32px;
+    box-shadow: 0 1px 4px rgba(25, 118, 210, 0.08);
+    color: #0d47a1;
+}
+.ayuda h2 {
+    margin-top: 0;
+    font-size: 1.2rem;
+    color: #1976d2;
+}
+.ayuda ul {
+    margin: 8px 0 8px 24px;
+    padding: 0;
+}
+.ayuda .formula {
+    font-family: 'Consolas', 'Menlo', 'Monaco', monospace;
+    background: #bbdefb;
+    padding: 2px 6px;
+    border-radius: 4px;
+    color: #1565c0;
+    font-size: 1em;
+}
+.param-info {
+    background: #fffde7;
+    border: 1px solid #ffe082;
+    border-radius: 6px;
+    color: #795548;
+    font-size: 1.05rem;
+    margin-bottom: 24px;
+    padding: 10px 18px;
+    text-align: center;
+    font-weight: bold;
+} 

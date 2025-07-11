@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulación Sistema Oscilatorio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="app">
+        <h1>Simulación de Sistema Oscilatorio</h1>
+        <div class="controls">
+            <div class="param-group">
+                <label for="mass">Masa (m, kg):</label>
+                <input type="number" id="mass" min="0.01" step="0.01" value="1">
+            </div>
+            <div class="param-group">
+                <label for="k">Constante del resorte (k, N/m):</label>
+                <input type="number" id="k" min="0.01" step="0.01" value="10">
+            </div>
+            <div class="param-group">
+                <label for="x0">Elongación inicial (x₀, m):</label>
+                <input type="number" id="x0" step="0.01" value="1">
+            </div>
+            <div class="param-group">
+                <label for="v0">Velocidad inicial (v₀, m/s):</label>
+                <input type="number" id="v0" step="0.01" value="0">
+            </div>
+            <div class="button-group">
+                <button id="startBtn">Iniciar</button>
+                <button id="pauseBtn">Pausar</button>
+                <button id="resetBtn">Reiniciar</button>
+            </div>
+        </div>
+        <div class="param-info" id="paramInfo"></div>
+        <div class="ayuda">
+            <h2>¿Cómo funciona este simulador?</h2>
+            <p>
+                Este simulador muestra la evolución de un <b>oscilador armónico simple</b> (como un resorte) usando las siguientes fórmulas:
+            </p>
+            <ul>
+                <li><b>Elongación:</b> <span class="formula">x(t) = x₀ cos(ωt) + (v₀/ω) sin(ωt)</span></li>
+                <li><b>Velocidad:</b> <span class="formula">v(t) = -x₀ ω sin(ωt) + v₀ cos(ωt)</span></li>
+                <li><b>Aceleración:</b> <span class="formula">a(t) = -k/m · x(t)</span></li>
+                <li><b>Fuerza:</b> <span class="formula">F(t) = -k · x(t)</span></li>
+                <li><b>Energía cinética:</b> <span class="formula">E<sub>c</sub>(t) = ½ m v(t)²</span></li>
+                <li><b>Energía potencial:</b> <span class="formula">E<sub>p</sub>(t) = ½ k x(t)²</span></li>
+                <li><b>Energía total:</b> <span class="formula">E<sub>t</sub> = ½ m v₀² + ½ k x₀²</span> (constante)</li>
+            </ul>
+            <p>
+                <b>¿Qué significan los valores debajo de cada gráfico?</b><br>
+                <ul>
+                    <li><b>Máximo:</b> El valor más alto (en valor absoluto) alcanzado durante la simulación.</li>
+                    <li><b>Actual:</b> El valor en el instante mostrado.</li>
+                </ul>
+                Puedes cambiar la <b>masa</b>, la <b>constante del resorte</b> y las <b>condiciones iniciales</b> para ver cómo afectan el movimiento y las energías.
+            </p>
+        </div>
+        <div class="charts">
+            <div class="chart-container">
+                <h2>Elongación (x)</h2>
+                <canvas id="elongacionChart"></canvas>
+                <div class="max-value" id="maxElongacion"></div>
+            </div>
+            <div class="chart-container">
+                <h2>Velocidad (v)</h2>
+                <canvas id="velocidadChart"></canvas>
+                <div class="max-value" id="maxVelocidad"></div>
+            </div>
+            <div class="chart-container">
+                <h2>Aceleración (a)</h2>
+                <canvas id="aceleracionChart"></canvas>
+                <div class="max-value" id="maxAceleracion"></div>
+                <div class="max-value" id="maxFuerza"></div>
+            </div>
+            <div class="chart-container">
+                <h2>Energía Total (Eₜ)</h2>
+                <canvas id="energiaChart"></canvas>
+                <div class="energias-info" id="energiasInfo"></div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="main.js"></script>
+</body>
+</html> 
