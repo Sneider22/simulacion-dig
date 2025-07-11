@@ -308,6 +308,15 @@ body.dark-mode .ayuda {
     background: #222;
     color: #90caf9;
 }
+body.dark-mode .ayuda h2 {
+    color: #ffe082;
+}
+body.dark-mode .ayuda .formula {
+    color: #ffe082;
+}
+body.dark-mode .param-group label {
+    color: #ffe082;
+}
 body.dark-mode .param-info {
     background: #222;
     color: #ffe082;
