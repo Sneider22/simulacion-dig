@@ -1,3 +1,7 @@
+body, #app, .ayuda, .param-group label, .param-group input, .button-group button, .chart-container, .max-value, .energias-info, .param-info {
+    font-family: 'Times New Roman', Times, serif;
+}
+
 body {
     font-family: Arial, sans-serif;
     background: #f4f4f4;
@@ -25,6 +29,25 @@ body {
     display: flex;
     flex-direction: column;
     gap: 4px;
+    min-width: 160px;
+    margin-bottom: 12px;
+}
+.param-group label {
+    font-weight: bold;
+    color: #1976d2;
+    margin-bottom: 2px;
+}
+.param-group input {
+    padding: 6px 10px;
+    border: 1px solid #90caf9;
+    border-radius: 4px;
+    font-size: 1rem;
+    outline: none;
+    transition: border 0.2s;
+}
+.param-group input:focus {
+    border-color: #1976d2;
+    background: #e3f2fd;
 }
 .button-group {
     display: flex;
@@ -32,17 +55,24 @@ body {
     margin-top: 8px;
 }
 .button-group button {
-    padding: 8px 18px;
+    padding: 10px 22px;
     font-size: 1rem;
     border: none;
-    border-radius: 4px;
-    background: #1976d2;
+    border-radius: 6px;
+    background: linear-gradient(90deg, #1976d2 70%, #64b5f6 100%);
     color: #fff;
     cursor: pointer;
-    transition: background 0.2s;
+    box-shadow: 0 2px 8px rgba(25, 118, 210, 0.12);
+    transition: background 0.2s, transform 0.1s;
+    font-weight: bold;
 }
 .button-group button:hover {
+    background: linear-gradient(90deg, #1565c0 70%, #1976d2 100%);
+    transform: translateY(-2px) scale(1.04);
+}
+.button-group button:active {
     background: #1565c0;
+    transform: scale(0.98);
 }
 .charts {
     display: grid;
@@ -60,10 +90,11 @@ body {
     font-size: 1.1rem;
     margin-bottom: 8px;
 }
-.chart-container canvas {
+.chart-container canvas,
+#energiaChart {
     width: 100% !important;
-    height: 200px !important;
-    max-width: 400px;
+    height: 220px !important;
+    max-width: 100%;
     display: block;
     margin: 0 auto;
 }
@@ -104,9 +135,12 @@ body {
     padding: 0;
 }
 .ayuda .formula {
-    font-family: 'Times New Roman', Times, serif;
+    font-family: inherit;
     color: #1565c0;
     font-size: 1em;
+    background: none;
+    padding: 0;
+    border-radius: 0;
 }
 .param-info {
     background: #fffde7;
@@ -118,4 +152,29 @@ body {
     padding: 10px 18px;
     text-align: center;
     font-weight: bold;
+}
+
+@media (max-width: 600px) {
+    #app {
+        padding: 8px;
+    }
+    .charts {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+    .chart-container canvas,
+    #energiaChart {
+        height: 160px !important;
+    }
+    .chart-container {
+        padding: 8px;
+    }
+    .param-info {
+        font-size: 0.95rem;
+        padding: 6px 8px;
+    }
+    .button-group button {
+        padding: 8px 12px;
+        font-size: 0.95rem;
+    }
 }
