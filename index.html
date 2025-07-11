@@ -50,15 +50,15 @@
                 Este simulador muestra la evolución de un <b>oscilador armónico simple</b> (como un resorte) usando las siguientes fórmulas:
             </p>
             <ul>
-                <li><b>Elongación:</b> <span class="formula">x(t) = x₀ cos(ωt) + (v₀/ω) sin(ωt)</span></li>
-                <li><b>Velocidad:</b> <span class="formula">v(t) = -x₀ ω sin(ωt) + v₀ cos(ωt)</span></li>
+                <li><b>Elongación:</b> <span class="formula">x(t) = x<sub>o</sub> cos(ωt) + (v<sub>o</sub>/ω) sin(ωt)</span></li>
+                <li><b>Velocidad:</b> <span class="formula">v(t) = -x<sub>o</sub> ω sin(ωt) + v<sub>o</sub> cos(ωt)</span></li>
                 <li><b>Aceleración:</b> <span class="formula">a(t) = -k/m · x(t)</span></li>
                 <li><b>Fuerza:</b> <span class="formula">F(t) = -k · x(t)</span></li>
                 <li><b>Energía cinética:</b> <span class="formula">E<sub>c</sub>(t) = ½ m v(t)²</span></li>
                 <li><b>Energía potencial:</b> <span class="formula">E<sub>p</sub>(t) = ½ k x(t)²</span></li>
-                <li><b>Energía total:</b> <span class="formula">E<sub>t</sub> = ½ m v₀² + ½ k x₀²</span> (constante)</li>
+                <li><b>Energía total:</b> <span class="formula">E<sub>t</sub> = ½ m v<sub>o</sub>² + ½ k x<sub>o</sub>²</span> (constante)</li>
                 <li><b>Frecuencia angular:</b> <span class="formula">ω = √(k/m)</span></li>
-                <li><b>Fase inicial (rad):</b> <span class="formula">φ = atan2(-v₀/(x₀·ω), 1)</span></li>
+                <li><b>Fase inicial (rad):</b> <span class="formula">φ = atan2(-v<sub>o</sub>/(x<sub>o</sub>·ω), 1)</span></li>
             </ul>
             <p>
                 <b>¿Qué significan los valores debajo de cada gráfico?</b><br>
@@ -91,7 +91,7 @@
                 <div class="max-value" id="maxFuerza"></div>
             </div>
             <div class="chart-container">
-                <h2>Energía Total (Eₜ)</h2>
+                <h2>Energía Total (E<sub>t</sub>)</h2>
                 <canvas id="energiaChart" width="400" height="200"></canvas>
                 <div class="energias-info" id="energiasInfo"></div>
             </div>
