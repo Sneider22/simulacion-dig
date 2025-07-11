@@ -23,7 +23,15 @@ body {
     flex-wrap: wrap;
     gap: 24px;
     margin-bottom: 32px;
-    align-items: flex-end;
+    align-items: center;
+    justify-content: center; /* Centra horizontalmente */
+    background: #e3f2fd;
+    border-radius: 10px;
+    box-shadow: 0 1px 6px rgba(25, 118, 210, 0.10);
+    padding: 24px 16px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
 }
 .param-group {
     display: flex;
@@ -53,9 +61,13 @@ body {
     display: flex;
     gap: 12px;
     margin-top: 8px;
+    justify-content: center;
+    width: 100%;
+    flex-direction: row; /* SIEMPRE horizontal */
+    align-items: center;
 }
 .button-group button {
-    padding: 10px 22px;
+    padding: 10px 18px;
     font-size: 1rem;
     border: none;
     border-radius: 6px;
@@ -65,6 +77,9 @@ body {
     box-shadow: 0 2px 8px rgba(25, 118, 210, 0.12);
     transition: background 0.2s, transform 0.1s;
     font-weight: bold;
+    min-width: 120px;   /* <-- tamaño mínimo igual para todos */
+    width: 120px;       /* <-- tamaño fijo igual para todos */
+    font-family: 'Times New Roman', Times, serif;
 }
 .button-group button:hover {
     background: linear-gradient(90deg, #1565c0 70%, #1976d2 100%);
@@ -153,6 +168,87 @@ body {
     text-align: center;
     font-weight: bold;
 }
+h1 {
+    text-align: center;
+    margin-top: 8px;
+}
+
+.modo-switch-container {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 24px; /* Más abajo */
+    margin-bottom: 16px;
+}
+
+.modo-switch {
+    position: relative;
+    display: inline-block;
+    width: auto;
+    height: 32px;
+}
+
+.slider {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: #e3f2fd;
+    border-radius: 32px;
+    padding: 4px 16px;
+    font-size: 1.2em;
+    transition: background 0.3s;
+}
+
+.slider .icon {
+    pointer-events: none;
+    transition: opacity 0.3s;
+}
+
+.slider .sol {
+    color: #fbc02d;
+    opacity: 1;
+}
+
+.slider .luna {
+    color: #1976d2;
+    opacity: 0.5;
+}
+
+.slider .label-sol,
+.slider .label-luna {
+    font-size: 0.95em;
+    color: #1976d2;
+    font-family: 'Times New Roman', Times, serif;
+    margin: 0 2px;
+}
+
+.modo-switch input:checked + .slider {
+    background: #23272b;
+}
+
+.modo-switch input:checked + .slider .sol {
+    opacity: 0.5;
+}
+
+.modo-switch input:checked + .slider .luna {
+    opacity: 1;
+}
+
+.modo-switch input:checked + .slider .label-sol {
+    color: #90caf9;
+}
+
+.modo-switch input:checked + .slider .label-luna {
+    color: #ffe082;
+}
+
+.modo-switch input[type="checkbox"] {
+    opacity: 0;
+    width: 0;
+    height: 0;
+    position: absolute;
+}
 
 @media (max-width: 600px) {
     #app {
@@ -174,7 +270,57 @@ body {
         padding: 6px 8px;
     }
     .button-group button {
-        padding: 8px 12px;
+        padding: 10px 18px;
         font-size: 0.95rem;
+        min-width: 100px;
     }
+    .controls {
+        flex-direction: column;
+        gap: 12px;
+        padding: 12px 4px;
+        max-width: 100%;
+    }
+    .button-group {
+        flex-direction: row; /* Mantiene horizontal en móvil */
+        gap: 8px;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+body.dark-mode {
+    background: #181a1b;
+    color: #e3e3e3;
+}
+body.dark-mode #app {
+    background: #23272b;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.4);
+}
+body.dark-mode .controls {
+    background: #23272b;
+    box-shadow: 0 1px 6px rgba(25, 118, 210, 0.20);
+}
+body.dark-mode .chart-container {
+    background: #23272b;
+    color: #e3e3e3;
+}
+body.dark-mode .ayuda {
+    background: #222;
+    color: #90caf9;
+}
+body.dark-mode .param-info {
+    background: #222;
+    color: #ffe082;
+    border-color: #795548;
+}
+body.dark-mode .button-group button {
+    background: linear-gradient(90deg, #333 70%, #1976d2 100%);
+    color: #fff;
+}
+body.dark-mode .button-group button:hover {
+    background: linear-gradient(90deg, #1565c0 70%, #333 100%);
+}
+body.dark-mode .max-value,
+body.dark-mode .energias-info {
+    color: #90caf9;
 }

@@ -7,8 +7,19 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <div class="modo-switch-container">
+      <label class="modo-switch">
+        <input type="checkbox" id="modoSwitch">
+        <span class="slider">
+          <span class="icon sol">&#9728;</span>
+          <span class="label-sol">Claro</span>
+          <span class="label-luna">Oscuro</span>
+          <span class="icon luna">&#9790;</span>
+        </span>
+      </label>
+    </div>
     <div id="app">
-        <h1>Simulación de Sistema Oscilatorio</h1>
+        <h1 style="text-align:center; margin-top:8px;">Simulación de Sistema Oscilatorio</h1>
         <div class="controls">
             <div class="param-group">
                 <label for="mass">Masa (m, kg):</label>

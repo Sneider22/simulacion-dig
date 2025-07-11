@@ -224,7 +224,7 @@ function actualizarGraficos() {
     aceleracionChart.update('none');
 
     // --- Solo para el gráfico de energía: ventana de tiempo fija ---
-    const ventanaSegundos = 10; // muestra solo los últimos 10 segundos
+    const ventanaSegundos = 4; // muestra solo los últimos 4 segundos
     const n = Math.floor(ventanaSegundos / dt);
     const start = Math.max(0, tiempos.length - n);
 
@@ -344,3 +344,7 @@ function actualizarValoresEnergia() {
     document.getElementById('energiasInfo').innerHTML =
         `<span class="max">Máximo: ${maxEnergia}</span> <span class="actual">Actual: ${actualEnergia}</span>`;
 }
+
+document.getElementById('modoSwitch').addEventListener('change', function() {
+    document.body.classList.toggle('dark-mode', this.checked);
+});
