@@ -46,6 +46,8 @@
                 <li><b>Energía cinética:</b> <span class="formula">E<sub>c</sub>(t) = ½ m v(t)²</span></li>
                 <li><b>Energía potencial:</b> <span class="formula">E<sub>p</sub>(t) = ½ k x(t)²</span></li>
                 <li><b>Energía total:</b> <span class="formula">E<sub>t</sub> = ½ m v₀² + ½ k x₀²</span> (constante)</li>
+                <li><b>Frecuencia angular:</b> <span class="formula">ω = √(k/m)</span></li>
+                <li><b>Fase inicial (rad):</b> <span class="formula">φ = atan2(-v₀/(x₀·ω), 1)</span></li>
             </ul>
             <p>
                 <b>¿Qué significan los valores debajo de cada gráfico?</b><br>
@@ -59,23 +61,27 @@
         <div class="charts">
             <div class="chart-container">
                 <h2>Elongación (x)</h2>
-                <canvas id="elongacionChart"></canvas>
+                <canvas id="elongacionChart" width="400" height="200"></canvas>
                 <div class="max-value" id="maxElongacion"></div>
             </div>
             <div class="chart-container">
                 <h2>Velocidad (v)</h2>
-                <canvas id="velocidadChart"></canvas>
+                <canvas id="velocidadChart" width="400" height="200"></canvas>
                 <div class="max-value" id="maxVelocidad"></div>
             </div>
             <div class="chart-container">
                 <h2>Aceleración (a)</h2>
-                <canvas id="aceleracionChart"></canvas>
+                <canvas id="aceleracionChart" width="400" height="200"></canvas>
                 <div class="max-value" id="maxAceleracion"></div>
+            </div>
+            <div class="chart-container">
+                <h2>Fuerza (F)</h2>
+                <canvas id="fuerzaChart" width="400" height="200"></canvas>
                 <div class="max-value" id="maxFuerza"></div>
             </div>
             <div class="chart-container">
                 <h2>Energía Total (Eₜ)</h2>
-                <canvas id="energiaChart"></canvas>
+                <canvas id="energiaChart" width="400" height="200"></canvas>
                 <div class="energias-info" id="energiasInfo"></div>
             </div>
         </div>
@@ -83,4 +89,4 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="main.js"></script>
 </body>
-</html> 
+</html>

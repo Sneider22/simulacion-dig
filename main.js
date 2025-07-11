@@ -28,6 +28,7 @@ const ctxElongacion = document.getElementById('elongacionChart').getContext('2d'
 const ctxVelocidad = document.getElementById('velocidadChart').getContext('2d');
 const ctxAceleracion = document.getElementById('aceleracionChart').getContext('2d');
 const ctxEnergia = document.getElementById('energiaChart').getContext('2d');
+const ctxFuerza = document.getElementById('fuerzaChart').getContext('2d');
 
 // Gráficos de Chart.js
 const elongacionChart = new Chart(ctxElongacion, {
@@ -116,6 +117,20 @@ const energiaChart = new Chart(ctxEnergia, {
             }
         }
     }
+});
+
+const fuerzaChart = new Chart(ctxFuerza, {
+    type: 'line',
+    data: {
+        labels: [],
+        datasets: [{
+            label: 'F (N)',
+            data: [],
+            borderColor: '#d32f2f',
+            fill: false,
+        }]
+    },
+    options: { responsive: true, animation: false }
 });
 
 function omega() {
@@ -208,12 +223,19 @@ function actualizarGraficos() {
     aceleracionChart.data.datasets[0].data = aceleraciones;
     aceleracionChart.update('none');
 
-    energiaChart.data.labels = tiempos;
-    energiaChart.data.datasets[0].data = energiasCineticas;
-    energiaChart.data.datasets[1].data = energiasPotenciales;
-    energiaChart.data.datasets[2].data = energiasTotales;
+    // --- Solo para el gráfico de energía: ventana de tiempo fija ---
+    const ventanaSegundos = 10; // muestra solo los últimos 10 segundos
+    const n = Math.floor(ventanaSegundos / dt);
+    const start = Math.max(0, tiempos.length - n);
+
+    energiaChart.data.labels = tiempos.slice(start);
+    energiaChart.data.datasets[0].data = energiasCineticas.slice(start);
+    energiaChart.data.datasets[1].data = energiasPotenciales.slice(start);
+    energiaChart.data.datasets[2].data = energiasTotales.slice(start);
+
     // Ajustar el rango Y automáticamente
-    const allEnergies = energiasCineticas.concat(energiasPotenciales, energiasTotales);
+    const allEnergies = energiaChart.data.datasets[0].data
+        .concat(energiaChart.data.datasets[1].data, energiaChart.data.datasets[2].data);
     if (allEnergies.length > 0) {
         const min = Math.min(...allEnergies);
         const max = Math.max(...allEnergies);
@@ -221,6 +243,10 @@ function actualizarGraficos() {
         energiaChart.options.scales.y.max = max + 0.05 * Math.abs(max - min);
     }
     energiaChart.update('none');
+
+    fuerzaChart.data.labels = tiempos;
+    fuerzaChart.data.datasets[0].data = fuerzas;
+    fuerzaChart.update('none');
 
     actualizarValoresMaximos();
 }
@@ -310,4 +336,11 @@ function simularPaso() {
         energiasPotenciales.shift();
         energiasTotales.shift();
     }
-} 
+}
+
+function actualizarValoresEnergia() {
+    const maxEnergia = Math.max(...energiasTotales).toFixed(3);
+    const actualEnergia = energiasTotales[energiasTotales.length - 1]?.toFixed(3) || '0';
+    document.getElementById('energiasInfo').innerHTML =
+        `<span class="max">Máximo: ${maxEnergia}</span> <span class="actual">Actual: ${actualEnergia}</span>`;
+}
