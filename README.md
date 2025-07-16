@@ -1,14 +1,14 @@
-# Simulación de Sistema Oscilatorio
+# ⚙️ Simulación de Sistema Oscilatorio
 
 Este proyecto es un simulador web interactivo de un **oscilador armónico simple** (masa y resorte), desarrollado en HTML, CSS y JavaScript. Permite visualizar y analizar el comportamiento físico del sistema, modificar parámetros y observar la evolución de las variables principales en tiempo real.
 
 ---
 
-## ¿Qué es un oscilador armónico simple?
+## 📚 ¿Qué es un oscilador armónico simple?
 
 Un oscilador armónico simple es un sistema físico formado por una masa conectada a un resorte ideal. Cuando la masa se separa de su posición de equilibrio, el resorte ejerce una fuerza restauradora proporcional a la elongación, generando un movimiento oscilatorio periódico. Este tipo de movimiento es fundamental en la física y aparece en muchos sistemas naturales y tecnológicos.
 
-### **Fórmulas utilizadas**
+### 📐 **Fórmulas utilizadas**
 
 - **Elongación:**  
   `x(t) = x₀ cos(ωt) + (v₀/ω) sin(ωt)`  
@@ -48,19 +48,20 @@ Un oscilador armónico simple es un sistema físico formado por una masa conecta
 
 ---
 
-## Características del simulador
+## ✨ Características del simulador
 
-- **Gráficos dinámicos** de elongación, velocidad, aceleración, fuerza y energía total usando Chart.js.
-- **Controles interactivos** para ajustar masa, constante del resorte, elongación inicial y velocidad inicial.
-- **Botones** para iniciar, pausar y reiniciar la simulación.
-- **Modo claro/oscuro** con selector deslizante (sol/luna) para mejor visualización.
-- **Visualización responsiva**: se adapta a computadoras y teléfonos.
-- **Explicación física** y fórmulas en la interfaz para facilitar el aprendizaje.
-- **Valores máximos y actuales** mostrados debajo de cada gráfico para análisis rápido.
+  
+- 📊 **Gráficos dinámicos** de elongación, velocidad, aceleración, fuerza y energía total usando Chart.js.
+- 🎛️ **Controles interactivos** para ajustar masa, constante del resorte, elongación inicial y velocidad inicial.
+- ▶️⏸️🔄 **Botones** para iniciar, pausar y reiniciar la simulación.
+- 🌞🌚 **Modo claro/oscuro** con selector deslizante (sol/luna) para mejor visualización.
+- 📱 **Visualización responsiva**: se adapta a computadoras y teléfonos.
+- 🧑‍🔬 **Explicación física** y fórmulas en la interfaz para facilitar el aprendizaje.
+- 📈 **Valores máximos y actuales** mostrados debajo de cada gráfico para análisis rápido.
 
 ---
 
-## ¿Cómo usar el simulador?
+## 🕹️ ¿Cómo usar el simulador?
 
 1. **Ajusta los parámetros físicos** (masa, constante del resorte, elongación y velocidad inicial) en los controles superiores.
 2. **Inicia la simulación** con el botón "Iniciar". Puedes pausar o reiniciar en cualquier momento.
@@ -70,22 +71,44 @@ Un oscilador armónico simple es un sistema físico formado por una masa conecta
 
 ---
 
-## Tecnologías utilizadas
+## 🛠️ Tecnologías utilizadas
 
-- **HTML5**
-- **CSS3** (diseño responsivo y modo oscuro)
-- **JavaScript**
-- **[Chart.js](https://www.chartjs.org/)** (gráficos interactivos)
+  
+- 📝 **HTML5**
+- 🎨 **CSS3** (diseño responsivo y modo oscuro)
+- 💻 **JavaScript**
+- 📊 **[Chart.js](https://www.chartjs.org/)** (gráficos interactivos)
+
+## 📷 Ejemplos de los gráficos
+
+<div align="center">
+  <img src="./img/elongacion.png" alt="Gráfico de Elongación" width="400"/>
+  <br><sub>Elongación (x)</sub>
+</div>
+
+<div align="center">
+  <img src="./img/velocidad.png" alt="Gráfico de Velocidad" width="400"/>
+  <br><sub>Velocidad (v)</sub>
+</div>
+
+<div align="center">
+  <img src="./img/aceleracion.png" alt="Gráfico de Aceleración" width="400"/>
+  <br><sub>Aceleración (a)</sub>
+</div>
+
+<div align="center">
+  <img src="./img/fuerza.png" alt="Gráfico de Fuerza" width="400"/>
+  <br><sub>Fuerza (F)</sub>
+</div>
+
+<div align="center">
+  <img src="./img/energia.png" alt="Gráfico de Energía Total" width="400"/>
+  <br><sub>Energía Total (Eₜ)</sub>
+</div>
 
 ---
 
-## Vista previa
-
-![Vista previa del simulador](screenshot.png)
-
----
-
-## Autor
+## 👤 Autor
 
 Sneider22
 
