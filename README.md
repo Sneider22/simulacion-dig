@@ -82,27 +82,27 @@ Un oscilador armónico simple es un sistema físico formado por una masa conecta
 ## 📷 Ejemplos de los gráficos
 
 <div align="center">
-  <img src="./img/elongacion.png" alt="Gráfico de Elongación" width="400"/>
+  <img src="elongacion.png" alt="Gráfico de Elongación" width="400"/>
   <br><sub>Elongación (x)</sub>
 </div>
 
 <div align="center">
-  <img src="./img/velocidad.png" alt="Gráfico de Velocidad" width="400"/>
+  <img src="velocidad.png" alt="Gráfico de Velocidad" width="400"/>
   <br><sub>Velocidad (v)</sub>
 </div>
 
 <div align="center">
-  <img src="./img/aceleracion.png" alt="Gráfico de Aceleración" width="400"/>
+  <img src="aceleracion.png" alt="Gráfico de Aceleración" width="400"/>
   <br><sub>Aceleración (a)</sub>
 </div>
 
 <div align="center">
-  <img src="./img/fuerza.png" alt="Gráfico de Fuerza" width="400"/>
+  <img src="fuerza.png" alt="Gráfico de Fuerza" width="400"/>
   <br><sub>Fuerza (F)</sub>
 </div>
 
 <div align="center">
-  <img src="./img/energia.png" alt="Gráfico de Energía Total" width="400"/>
+  <img src="energia.png" alt="Gráfico de Energía Total" width="400"/>
   <br><sub>Energía Total (Eₜ)</sub>
 </div>
 
