@@ -4,7 +4,7 @@ Este proyecto es un simulador web interactivo de un **oscilador armónico simple
 
 ---
 
-## 📚 ¿Qué es un oscilador armónico simple?
+## ¿Qué es un oscilador armónico simple?
 
 Un oscilador armónico simple es un sistema físico formado por una masa conectada a un resorte ideal. Cuando la masa se separa de su posición de equilibrio, el resorte ejerce una fuerza restauradora proporcional a la elongación, generando un movimiento oscilatorio periódico. Este tipo de movimiento es fundamental en la física y aparece en muchos sistemas naturales y tecnológicos.
 
@@ -48,7 +48,7 @@ Un oscilador armónico simple es un sistema físico formado por una masa conecta
 
 ---
 
-## ✨ Características del simulador
+## Características del simulador
 
   
 - 📊 **Gráficos dinámicos** de elongación, velocidad, aceleración, fuerza y energía total usando Chart.js.
@@ -74,10 +74,12 @@ Un oscilador armónico simple es un sistema físico formado por una masa conecta
 ## 🛠️ Tecnologías utilizadas
 
   
-- 📝 **HTML5**
-- 🎨 **CSS3** (diseño responsivo y modo oscuro)
-- 💻 **JavaScript**
-- 📊 **[Chart.js](https://www.chartjs.org/)** (gráficos interactivos)
+- **HTML5**
+- **CSS3** (diseño responsivo y modo oscuro)
+- **JavaScript**
+- **[Chart.js](https://www.chartjs.org/)** (gráficos interactivos)
+
+---
 
 ## 📷 Ejemplos de los gráficos
 
