@@ -102,7 +102,7 @@ Un oscilador armónico simple es un sistema físico formado por una masa conecta
 
 ## 👤 Autor
 
-Sneider Araque 7mo semestre
+Sneider Araque - 7mo semestre (Simulación Digital)
 
 ---
 
