@@ -61,7 +61,7 @@ Un oscilador armónico simple es un sistema físico formado por una masa conecta
 
 ---
 
-## 🕹️ ¿Cómo usar el simulador?
+## ¿Cómo usar el simulador?
 
 1. **Ajusta los parámetros físicos** (masa, constante del resorte, elongación y velocidad inicial) en los controles superiores.
 2. **Inicia la simulación** con el botón "Iniciar". Puedes pausar o reiniciar en cualquier momento.
@@ -71,7 +71,7 @@ Un oscilador armónico simple es un sistema físico formado por una masa conecta
 
 ---
 
-## 🛠️ Tecnologías utilizadas
+## Tecnologías utilizadas
 
   
 - **HTML5**
@@ -81,7 +81,7 @@ Un oscilador armónico simple es un sistema físico formado por una masa conecta
 
 ---
 
-## 📷 Ejemplos de los gráficos
+## Ejemplos de los gráficos
 
 <div align="center">
   <img src="elongacion.png" alt="Gráfico de Elongación" width="320"/>
